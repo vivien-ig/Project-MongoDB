@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Users</title>
+</head>
+<body>
+  <h1>📋 Submitted Users</h1>
+  <% if (users.length === 0) { %>
+    <p>No users submitted yet.</p>
+  <% } else { %>
+    <ul>
+      <% users.forEach(user => { %>
+        <li>
+          <strong><%= user.user_name %></strong> (Age: <%= user.user_age %>, City: <%= user.user_city %>, Phone: <%= user.user_phone %>, Email: <%= user.user_email %>)
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+  <a href="/">← Go back to form</a>
+</body>
+</html>
